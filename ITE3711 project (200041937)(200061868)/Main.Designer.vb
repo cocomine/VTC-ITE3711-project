@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -50,7 +50,7 @@ Partial Class Form1
         Me.Student_gb = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Find_bt = New System.Windows.Forms.Button()
-        Me.Record_lb = New System.Windows.Forms.ListBox()
+        Me.Record_lib = New System.Windows.Forms.ListBox()
         Me.Moduls_Statistics_gb = New System.Windows.Forms.GroupBox()
         Me.Count_of_F_tb = New System.Windows.Forms.TextBox()
         Me.Count_of_A_tb = New System.Windows.Forms.TextBox()
@@ -61,6 +61,9 @@ Partial Class Form1
         Me.Module_Average_lb = New System.Windows.Forms.Label()
         Me.Mumber_lb = New System.Windows.Forms.Label()
         Me.Show_bt = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Input_gp.SuspendLayout()
         Me.Result_gb.SuspendLayout()
         Me.lnput_CA_gb.SuspendLayout()
@@ -141,38 +144,47 @@ Partial Class Form1
         'CA_Mark__tb
         '
         Me.CA_Mark__tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.CA_Mark__tb.Cursor = System.Windows.Forms.Cursors.No
         Me.CA_Mark__tb.Location = New System.Drawing.Point(160, 58)
         Me.CA_Mark__tb.Name = "CA_Mark__tb"
         Me.CA_Mark__tb.ReadOnly = True
         Me.CA_Mark__tb.Size = New System.Drawing.Size(110, 26)
         Me.CA_Mark__tb.TabIndex = 3
+        Me.CA_Mark__tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Remarks_tb
         '
         Me.Remarks_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Remarks_tb.Cursor = System.Windows.Forms.Cursors.No
         Me.Remarks_tb.Location = New System.Drawing.Point(417, 114)
         Me.Remarks_tb.Name = "Remarks_tb"
         Me.Remarks_tb.ReadOnly = True
         Me.Remarks_tb.Size = New System.Drawing.Size(128, 26)
         Me.Remarks_tb.TabIndex = 8
+        Me.Remarks_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Module_Grade_tb
         '
         Me.Module_Grade_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Module_Grade_tb.Cursor = System.Windows.Forms.Cursors.No
         Me.Module_Grade_tb.Location = New System.Drawing.Point(160, 117)
         Me.Module_Grade_tb.Name = "Module_Grade_tb"
         Me.Module_Grade_tb.ReadOnly = True
         Me.Module_Grade_tb.Size = New System.Drawing.Size(110, 26)
         Me.Module_Grade_tb.TabIndex = 7
+        Me.Module_Grade_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Module_Marks_tb
         '
         Me.Module_Marks_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Module_Marks_tb.Cursor = System.Windows.Forms.Cursors.No
+        Me.Module_Marks_tb.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Module_Marks_tb.Location = New System.Drawing.Point(417, 58)
         Me.Module_Marks_tb.Name = "Module_Marks_tb"
         Me.Module_Marks_tb.ReadOnly = True
         Me.Module_Marks_tb.Size = New System.Drawing.Size(128, 26)
         Me.Module_Marks_tb.TabIndex = 5
+        Me.Module_Marks_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lnput_CA_gb
         '
@@ -195,31 +207,39 @@ Partial Class Form1
         '
         'Exam_tb
         '
-        Me.Exam_tb.Location = New System.Drawing.Point(328, 127)
+        Me.Exam_tb.Location = New System.Drawing.Point(328, 126)
+        Me.Exam_tb.MaxLength = 3
         Me.Exam_tb.Name = "Exam_tb"
         Me.Exam_tb.Size = New System.Drawing.Size(100, 26)
         Me.Exam_tb.TabIndex = 18
+        Me.Exam_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Project_tb
         '
-        Me.Project_tb.Location = New System.Drawing.Point(96, 127)
+        Me.Project_tb.Location = New System.Drawing.Point(96, 126)
+        Me.Project_tb.MaxLength = 3
         Me.Project_tb.Name = "Project_tb"
         Me.Project_tb.Size = New System.Drawing.Size(100, 26)
         Me.Project_tb.TabIndex = 17
+        Me.Project_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Quizzes_tb
         '
         Me.Quizzes_tb.Location = New System.Drawing.Point(328, 70)
+        Me.Quizzes_tb.MaxLength = 3
         Me.Quizzes_tb.Name = "Quizzes_tb"
         Me.Quizzes_tb.Size = New System.Drawing.Size(100, 26)
         Me.Quizzes_tb.TabIndex = 16
+        Me.Quizzes_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Test_tb
         '
         Me.Test_tb.Location = New System.Drawing.Point(96, 70)
+        Me.Test_tb.MaxLength = 3
         Me.Test_tb.Name = "Test_tb"
         Me.Test_tb.Size = New System.Drawing.Size(100, 26)
         Me.Test_tb.TabIndex = 15
+        Me.Test_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Exam_lb
         '
@@ -242,7 +262,7 @@ Partial Class Form1
         'Project_lb
         '
         Me.Project_lb.AutoSize = True
-        Me.Project_lb.Location = New System.Drawing.Point(7, 127)
+        Me.Project_lb.Location = New System.Drawing.Point(7, 126)
         Me.Project_lb.Name = "Project_lb"
         Me.Project_lb.Size = New System.Drawing.Size(70, 20)
         Me.Project_lb.TabIndex = 12
@@ -268,6 +288,7 @@ Partial Class Form1
         '
         'Confirm_bt
         '
+        Me.Confirm_bt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Confirm_bt.Location = New System.Drawing.Point(463, 93)
         Me.Confirm_bt.Name = "Confirm_bt"
         Me.Confirm_bt.Size = New System.Drawing.Size(114, 40)
@@ -277,6 +298,7 @@ Partial Class Form1
         '
         'Clear_bt
         '
+        Me.Clear_bt.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Clear_bt.Location = New System.Drawing.Point(473, 38)
         Me.Clear_bt.Name = "Clear_bt"
         Me.Clear_bt.Size = New System.Drawing.Size(114, 35)
@@ -296,13 +318,15 @@ Partial Class Form1
         'Name_tb
         '
         Me.Name_tb.Location = New System.Drawing.Point(86, 42)
+        Me.Name_tb.MaxLength = 100
         Me.Name_tb.Name = "Name_tb"
         Me.Name_tb.Size = New System.Drawing.Size(352, 26)
         Me.Name_tb.TabIndex = 6
+        Me.Name_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Find_tb
         '
-        Me.Find_tb.Location = New System.Drawing.Point(17, 615)
+        Me.Find_tb.Location = New System.Drawing.Point(17, 608)
         Me.Find_tb.Name = "Find_tb"
         Me.Find_tb.Size = New System.Drawing.Size(219, 26)
         Me.Find_tb.TabIndex = 4
@@ -312,7 +336,7 @@ Partial Class Form1
         Me.Student_gb.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Student_gb.Controls.Add(Me.Label1)
         Me.Student_gb.Controls.Add(Me.Find_bt)
-        Me.Student_gb.Controls.Add(Me.Record_lb)
+        Me.Student_gb.Controls.Add(Me.Record_lib)
         Me.Student_gb.Controls.Add(Me.Find_tb)
         Me.Student_gb.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Student_gb.Location = New System.Drawing.Point(684, 11)
@@ -325,7 +349,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 573)
+        Me.Label1.Location = New System.Drawing.Point(13, 527)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(265, 20)
         Me.Label1.TabIndex = 12
@@ -333,23 +357,25 @@ Partial Class Form1
         '
         'Find_bt
         '
-        Me.Find_bt.Location = New System.Drawing.Point(242, 615)
+        Me.Find_bt.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Find_bt.Location = New System.Drawing.Point(242, 608)
         Me.Find_bt.Name = "Find_bt"
         Me.Find_bt.Size = New System.Drawing.Size(75, 26)
         Me.Find_bt.TabIndex = 11
         Me.Find_bt.Text = "Find "
         Me.Find_bt.UseVisualStyleBackColor = True
         '
-        'Record_lb
+        'Record_lib
         '
-        Me.Record_lb.AllowDrop = True
-        Me.Record_lb.FormattingEnabled = True
-        Me.Record_lb.ItemHeight = 20
-        Me.Record_lb.Items.AddRange(New Object() {"d", "v", "d"})
-        Me.Record_lb.Location = New System.Drawing.Point(17, 30)
-        Me.Record_lb.Name = "Record_lb"
-        Me.Record_lb.Size = New System.Drawing.Size(300, 524)
-        Me.Record_lb.TabIndex = 0
+        Me.Record_lib.AllowDrop = True
+        Me.Record_lib.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Record_lib.FormattingEnabled = True
+        Me.Record_lib.ItemHeight = 20
+        Me.Record_lib.Items.AddRange(New Object() {"d", "v", "d"})
+        Me.Record_lib.Location = New System.Drawing.Point(17, 30)
+        Me.Record_lib.Name = "Record_lib"
+        Me.Record_lib.Size = New System.Drawing.Size(300, 484)
+        Me.Record_lib.TabIndex = 0
         '
         'Moduls_Statistics_gb
         '
@@ -359,7 +385,10 @@ Partial Class Form1
         Me.Moduls_Statistics_gb.Controls.Add(Me.Module_Average_tb)
         Me.Moduls_Statistics_gb.Controls.Add(Me.Mumber_tb)
         Me.Moduls_Statistics_gb.Controls.Add(Me.Count_of_F_lb)
+        Me.Moduls_Statistics_gb.Controls.Add(Me.TextBox3)
         Me.Moduls_Statistics_gb.Controls.Add(Me.Count_of_A_lb)
+        Me.Moduls_Statistics_gb.Controls.Add(Me.TextBox2)
+        Me.Moduls_Statistics_gb.Controls.Add(Me.TextBox1)
         Me.Moduls_Statistics_gb.Controls.Add(Me.Module_Average_lb)
         Me.Moduls_Statistics_gb.Controls.Add(Me.Mumber_lb)
         Me.Moduls_Statistics_gb.Controls.Add(Me.Show_bt)
@@ -367,7 +396,7 @@ Partial Class Form1
         Me.Moduls_Statistics_gb.ForeColor = System.Drawing.Color.Black
         Me.Moduls_Statistics_gb.Location = New System.Drawing.Point(12, 483)
         Me.Moduls_Statistics_gb.Name = "Moduls_Statistics_gb"
-        Me.Moduls_Statistics_gb.Size = New System.Drawing.Size(638, 187)
+        Me.Moduls_Statistics_gb.Size = New System.Drawing.Size(638, 186)
         Me.Moduls_Statistics_gb.TabIndex = 10
         Me.Moduls_Statistics_gb.TabStop = False
         Me.Moduls_Statistics_gb.Text = "Module Statistics "
@@ -375,38 +404,46 @@ Partial Class Form1
         'Count_of_F_tb
         '
         Me.Count_of_F_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Count_of_F_tb.Cursor = System.Windows.Forms.Cursors.No
         Me.Count_of_F_tb.Location = New System.Drawing.Point(457, 136)
         Me.Count_of_F_tb.Name = "Count_of_F_tb"
         Me.Count_of_F_tb.ReadOnly = True
         Me.Count_of_F_tb.Size = New System.Drawing.Size(100, 26)
         Me.Count_of_F_tb.TabIndex = 17
+        Me.Count_of_F_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Count_of_A_tb
         '
         Me.Count_of_A_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Count_of_A_tb.Cursor = System.Windows.Forms.Cursors.No
         Me.Count_of_A_tb.Location = New System.Drawing.Point(203, 133)
         Me.Count_of_A_tb.Name = "Count_of_A_tb"
         Me.Count_of_A_tb.ReadOnly = True
         Me.Count_of_A_tb.Size = New System.Drawing.Size(86, 26)
         Me.Count_of_A_tb.TabIndex = 16
+        Me.Count_of_A_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Module_Average_tb
         '
         Me.Module_Average_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Module_Average_tb.Cursor = System.Windows.Forms.Cursors.No
         Me.Module_Average_tb.Location = New System.Drawing.Point(457, 84)
         Me.Module_Average_tb.Name = "Module_Average_tb"
         Me.Module_Average_tb.ReadOnly = True
         Me.Module_Average_tb.Size = New System.Drawing.Size(100, 26)
         Me.Module_Average_tb.TabIndex = 15
+        Me.Module_Average_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Mumber_tb
         '
         Me.Mumber_tb.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Mumber_tb.Cursor = System.Windows.Forms.Cursors.No
         Me.Mumber_tb.Location = New System.Drawing.Point(203, 78)
         Me.Mumber_tb.Name = "Mumber_tb"
         Me.Mumber_tb.ReadOnly = True
         Me.Mumber_tb.Size = New System.Drawing.Size(86, 26)
         Me.Mumber_tb.TabIndex = 14
+        Me.Mumber_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Count_of_F_lb
         '
@@ -446,14 +483,45 @@ Partial Class Form1
         '
         'Show_bt
         '
-        Me.Show_bt.Location = New System.Drawing.Point(348, 23)
+        Me.Show_bt.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Show_bt.Location = New System.Drawing.Point(348, 25)
         Me.Show_bt.Name = "Show_bt"
         Me.Show_bt.Size = New System.Drawing.Size(239, 37)
         Me.Show_bt.TabIndex = 0
         Me.Show_bt.Text = "Show Statistics"
         Me.Show_bt.UseVisualStyleBackColor = True
         '
-        'Form1
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.No
+        Me.TextBox1.Location = New System.Drawing.Point(427, -133)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(128, 26)
+        Me.TextBox1.TabIndex = 5
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.No
+        Me.TextBox2.Location = New System.Drawing.Point(170, -74)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(110, 26)
+        Me.TextBox2.TabIndex = 7
+        '
+        'TextBox3
+        '
+        Me.TextBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.No
+        Me.TextBox3.Location = New System.Drawing.Point(427, -77)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ReadOnly = True
+        Me.TextBox3.Size = New System.Drawing.Size(128, 26)
+        Me.TextBox3.TabIndex = 8
+        '
+        'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -461,7 +529,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Moduls_Statistics_gb)
         Me.Controls.Add(Me.Student_gb)
         Me.Controls.Add(Me.Input_gp)
-        Me.Name = "Form1"
+        Me.Name = "Main"
         Me.Text = "Calculation of Module Grade "
         Me.Input_gp.ResumeLayout(False)
         Me.Input_gp.PerformLayout()
@@ -488,7 +556,7 @@ Partial Class Form1
     Friend WithEvents Module_Grade_tb As TextBox
     Friend WithEvents Remarks_tb As TextBox
     Friend WithEvents Student_gb As GroupBox
-    Friend WithEvents Record_lb As ListBox
+    Friend WithEvents Record_lib As ListBox
     Friend WithEvents lnput_CA_gb As GroupBox
     Friend WithEvents Exam_lb As Label
     Friend WithEvents Quizzes_lb As Label
@@ -516,4 +584,7 @@ Partial Class Form1
     Friend WithEvents Mumber_lb As Label
     Friend WithEvents Find_bt As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
