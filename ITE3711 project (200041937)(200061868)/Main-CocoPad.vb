@@ -2,7 +2,7 @@
 
 Public Class Main
     Const TEST_PERCENTAGE As Double = 0.5, PROJECT_PERCENTAGE As Double = 0.3, QUIZZES_PERCENTAGE As Double = 0.2, CA_PERCENTAGE As Double = 0.4, EXAM_PERCENTAGE As Double = 0.6
-    Dim STU_DATAS As New Dictionary(Of Integer, Dictionary(Of String, String))
+    Dim stu_datas As Dictionary(Of String, Dictionary(Of String, String))
 
     '初始化
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -37,28 +37,6 @@ Public Class Main
         Else
             MsgBox("Enter the name in English letters in the find field.", 48, "Wrong typing")
         End If
-    End Sub
-
-    Private Sub Show_bt_Click(sender As Object, e As EventArgs) Handles Show_bt.Click
-        Dim Total_stu As Integer = STU_DATAS.Count
-        Dim Total_stu_mark, Avg_mark As Double
-
-        For Each stu As Dictionary(Of String, String) In STU_DATAS.Values
-            Dim CA_Marks As Double = stu("Test") * TEST_PERCENTAGE + stu("Project") * PROJECT_PERCENTAGE + stu("Quizzes") * QUIZZES_PERCENTAGE
-            Dim Module_Marks As Double = CA_Marks * CA_PERCENTAGE + stu("Exam") * EXAM_PERCENTAGE
-            Total_stu_mark += Module_Marks
-        Next
-
-        If Total_stu > 0 Then
-            Avg_mark = Total_stu_mark / Total_stu
-            Number_tb.Text = Total_stu
-            Module_Average_tb.Text = Avg_mark
-        Else
-            Number_tb.Text = "N/A"
-            Module_Average_tb.Text = "N/A"
-        End If
-
-
     End Sub
 
     '清除所有'
@@ -172,9 +150,8 @@ Public Class Main
         Remarks_tb.Text = Remark
 
         '儲存學生資料
+        stu_datas.Add(InputBoxs("Name"), InputBoxs)
         Record_lib.Items.Add(InputBoxs("Name"))
-        'STU_DATAS.Add(InputBoxs("Name"), InputBoxs)
-
 
     End Sub
 
