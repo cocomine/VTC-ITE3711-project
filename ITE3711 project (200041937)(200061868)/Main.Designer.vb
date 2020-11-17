@@ -372,7 +372,6 @@ Partial Class Main
         Me.Record_lib.Cursor = System.Windows.Forms.Cursors.Default
         Me.Record_lib.FormattingEnabled = True
         Me.Record_lib.ItemHeight = 20
-        Me.Record_lib.Items.AddRange(New Object() {"d", "v", "d"})
         Me.Record_lib.Location = New System.Drawing.Point(17, 32)
         Me.Record_lib.Name = "Record_lib"
         Me.Record_lib.Size = New System.Drawing.Size(300, 504)

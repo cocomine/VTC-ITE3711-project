@@ -2,7 +2,7 @@
 
 Public Class Main
     Const TEST_PERCENTAGE As Double = 0.5, PROJECT_PERCENTAGE As Double = 0.3, QUIZZES_PERCENTAGE As Double = 0.2, CA_PERCENTAGE As Double = 0.4, EXAM_PERCENTAGE As Double = 0.6
-    Dim STU_DATAS As New Dictionary(Of Integer, Dictionary(Of String, String))
+    Dim STU_DATAS As New List(Of Dictionary(Of String, String))
 
     '初始化
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,20 +39,32 @@ Public Class Main
         End If
     End Sub
 
+    '展示統計
     Private Sub Show_bt_Click(sender As Object, e As EventArgs) Handles Show_bt.Click
         Dim Total_stu As Integer = STU_DATAS.Count
         Dim Total_stu_mark, Avg_mark As Double
+        Dim Count_A, Count_F As Integer
 
-        For Each stu As Dictionary(Of String, String) In STU_DATAS.Values
+        For Each stu As Dictionary(Of String, String) In STU_DATAS
             Dim CA_Marks As Double = stu("Test") * TEST_PERCENTAGE + stu("Project") * PROJECT_PERCENTAGE + stu("Quizzes") * QUIZZES_PERCENTAGE
             Dim Module_Marks As Double = CA_Marks * CA_PERCENTAGE + stu("Exam") * EXAM_PERCENTAGE
             Total_stu_mark += Module_Marks
+            '計級別
+            If CA_Marks >= 40 Or stu("Exam") >= 40 Then
+                If Module_Marks >= 75 Then
+                    Count_A += 1
+                End If
+            Else
+                Count_F += 1
+            End If
         Next
 
         If Total_stu > 0 Then
-            Avg_mark = Total_stu_mark / Total_stu
+            Avg_mark = Math.Round(Total_stu_mark / Total_stu, 2)
             Number_tb.Text = Total_stu
             Module_Average_tb.Text = Avg_mark
+            Count_of_A_tb.Text = Count_A
+            Count_of_F_tb.Text = Count_F
         Else
             Number_tb.Text = "N/A"
             Module_Average_tb.Text = "N/A"
@@ -66,6 +78,7 @@ Public Class Main
         Dim AllTextBoxControl = Get_All_Control(Me, GetType(TextBox))
         For Each textbox As TextBox In AllTextBoxControl.Values
             textbox.Clear()
+            STU_DATAS.Clear()
         Next
         If Record_lib.Items.Count > 0 Then
             Dim YesNo = MsgBox("Also have some data in Student Record list. Do you want clear too?", 4 + 32 + 256, "Clear too?")
@@ -172,10 +185,20 @@ Public Class Main
         Remarks_tb.Text = Remark
 
         '儲存學生資料
+        For Each value As Dictionary(Of String, String) In STU_DATAS
+            If value("Name").Equals(InputBoxs("Name")) Then
+                Dim OkNo = MsgBox("Check to have the same name. Are you sure you want to continue typing?", 1 + 32, "Are you sure?")
+                If OkNo = 1 Then
+                    Record_lib.Items.Add(InputBoxs("Name"))
+                    STU_DATAS.Add(InputBoxs)
+                    Return
+                Else
+                    Return
+                End If
+            End If
+        Next
         Record_lib.Items.Add(InputBoxs("Name"))
-        'STU_DATAS.Add(InputBoxs("Name"), InputBoxs)
-
-
+        STU_DATAS.Add(InputBoxs)
     End Sub
 
     '將背景改為白色
