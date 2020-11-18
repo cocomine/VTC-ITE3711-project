@@ -149,7 +149,8 @@ Partial Class Main
         Me.CA_Mark__tb.Name = "CA_Mark__tb"
         Me.CA_Mark__tb.ReadOnly = True
         Me.CA_Mark__tb.Size = New System.Drawing.Size(110, 26)
-        Me.CA_Mark__tb.TabIndex = 3
+        Me.CA_Mark__tb.TabIndex = 101
+        Me.CA_Mark__tb.TabStop = False
         Me.CA_Mark__tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Remarks_tb
@@ -160,7 +161,8 @@ Partial Class Main
         Me.Remarks_tb.Name = "Remarks_tb"
         Me.Remarks_tb.ReadOnly = True
         Me.Remarks_tb.Size = New System.Drawing.Size(128, 26)
-        Me.Remarks_tb.TabIndex = 8
+        Me.Remarks_tb.TabIndex = 104
+        Me.Remarks_tb.TabStop = False
         Me.Remarks_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Module_Grade_tb
@@ -171,7 +173,8 @@ Partial Class Main
         Me.Module_Grade_tb.Name = "Module_Grade_tb"
         Me.Module_Grade_tb.ReadOnly = True
         Me.Module_Grade_tb.Size = New System.Drawing.Size(110, 26)
-        Me.Module_Grade_tb.TabIndex = 7
+        Me.Module_Grade_tb.TabIndex = 103
+        Me.Module_Grade_tb.TabStop = False
         Me.Module_Grade_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Module_Marks_tb
@@ -183,7 +186,8 @@ Partial Class Main
         Me.Module_Marks_tb.Name = "Module_Marks_tb"
         Me.Module_Marks_tb.ReadOnly = True
         Me.Module_Marks_tb.Size = New System.Drawing.Size(128, 26)
-        Me.Module_Marks_tb.TabIndex = 5
+        Me.Module_Marks_tb.TabIndex = 102
+        Me.Module_Marks_tb.TabStop = False
         Me.Module_Marks_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lnput_CA_gb
@@ -211,7 +215,7 @@ Partial Class Main
         Me.Exam_tb.MaxLength = 5
         Me.Exam_tb.Name = "Exam_tb"
         Me.Exam_tb.Size = New System.Drawing.Size(100, 26)
-        Me.Exam_tb.TabIndex = 18
+        Me.Exam_tb.TabIndex = 5
         Me.Exam_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Project_tb
@@ -220,7 +224,7 @@ Partial Class Main
         Me.Project_tb.MaxLength = 5
         Me.Project_tb.Name = "Project_tb"
         Me.Project_tb.Size = New System.Drawing.Size(100, 26)
-        Me.Project_tb.TabIndex = 17
+        Me.Project_tb.TabIndex = 4
         Me.Project_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Quizzes_tb
@@ -229,7 +233,7 @@ Partial Class Main
         Me.Quizzes_tb.MaxLength = 5
         Me.Quizzes_tb.Name = "Quizzes_tb"
         Me.Quizzes_tb.Size = New System.Drawing.Size(100, 26)
-        Me.Quizzes_tb.TabIndex = 16
+        Me.Quizzes_tb.TabIndex = 3
         Me.Quizzes_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Test_tb
@@ -238,7 +242,7 @@ Partial Class Main
         Me.Test_tb.MaxLength = 5
         Me.Test_tb.Name = "Test_tb"
         Me.Test_tb.Size = New System.Drawing.Size(100, 26)
-        Me.Test_tb.TabIndex = 15
+        Me.Test_tb.TabIndex = 2
         Me.Test_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Exam_lb
@@ -292,7 +296,7 @@ Partial Class Main
         Me.Confirm_bt.Location = New System.Drawing.Point(463, 101)
         Me.Confirm_bt.Name = "Confirm_bt"
         Me.Confirm_bt.Size = New System.Drawing.Size(114, 43)
-        Me.Confirm_bt.TabIndex = 9
+        Me.Confirm_bt.TabIndex = 6
         Me.Confirm_bt.Text = "Confirm"
         Me.Confirm_bt.UseVisualStyleBackColor = True
         '
@@ -302,7 +306,7 @@ Partial Class Main
         Me.Clear_bt.Location = New System.Drawing.Point(473, 41)
         Me.Clear_bt.Name = "Clear_bt"
         Me.Clear_bt.Size = New System.Drawing.Size(114, 38)
-        Me.Clear_bt.TabIndex = 8
+        Me.Clear_bt.TabIndex = 7
         Me.Clear_bt.Text = "Clear All"
         Me.Clear_bt.UseVisualStyleBackColor = True
         '
@@ -322,7 +326,7 @@ Partial Class Main
         Me.Name_tb.MaxLength = 100
         Me.Name_tb.Name = "Name_tb"
         Me.Name_tb.Size = New System.Drawing.Size(352, 26)
-        Me.Name_tb.TabIndex = 6
+        Me.Name_tb.TabIndex = 1
         Me.Name_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Find_tb
@@ -330,7 +334,7 @@ Partial Class Main
         Me.Find_tb.Location = New System.Drawing.Point(17, 659)
         Me.Find_tb.Name = "Find_tb"
         Me.Find_tb.Size = New System.Drawing.Size(219, 26)
-        Me.Find_tb.TabIndex = 4
+        Me.Find_tb.TabIndex = 8
         '
         'Student_gb
         '
@@ -352,9 +356,9 @@ Partial Class Main
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(14, 549)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(276, 20)
+        Me.Label1.Size = New System.Drawing.Size(243, 20)
         Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Double-click the name to recheck"
+        Me.Label1.Text = "Double-click the name to edit"
         '
         'Find_bt
         '
@@ -362,7 +366,7 @@ Partial Class Main
         Me.Find_bt.Location = New System.Drawing.Point(242, 659)
         Me.Find_bt.Name = "Find_bt"
         Me.Find_bt.Size = New System.Drawing.Size(75, 28)
-        Me.Find_bt.TabIndex = 11
+        Me.Find_bt.TabIndex = 9
         Me.Find_bt.Text = "Find "
         Me.Find_bt.UseVisualStyleBackColor = True
         '
@@ -375,7 +379,7 @@ Partial Class Main
         Me.Record_lib.Location = New System.Drawing.Point(17, 32)
         Me.Record_lib.Name = "Record_lib"
         Me.Record_lib.Size = New System.Drawing.Size(300, 504)
-        Me.Record_lib.TabIndex = 0
+        Me.Record_lib.TabIndex = 10
         '
         'Moduls_Statistics_gb
         '
@@ -409,7 +413,7 @@ Partial Class Main
         Me.Count_of_F_tb.Name = "Count_of_F_tb"
         Me.Count_of_F_tb.ReadOnly = True
         Me.Count_of_F_tb.Size = New System.Drawing.Size(100, 26)
-        Me.Count_of_F_tb.TabIndex = 17
+        Me.Count_of_F_tb.TabIndex = 108
         Me.Count_of_F_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Count_of_A_tb
@@ -420,7 +424,7 @@ Partial Class Main
         Me.Count_of_A_tb.Name = "Count_of_A_tb"
         Me.Count_of_A_tb.ReadOnly = True
         Me.Count_of_A_tb.Size = New System.Drawing.Size(86, 26)
-        Me.Count_of_A_tb.TabIndex = 16
+        Me.Count_of_A_tb.TabIndex = 107
         Me.Count_of_A_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Module_Average_tb
@@ -431,7 +435,8 @@ Partial Class Main
         Me.Module_Average_tb.Name = "Module_Average_tb"
         Me.Module_Average_tb.ReadOnly = True
         Me.Module_Average_tb.Size = New System.Drawing.Size(100, 26)
-        Me.Module_Average_tb.TabIndex = 15
+        Me.Module_Average_tb.TabIndex = 106
+        Me.Module_Average_tb.TabStop = False
         Me.Module_Average_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Number_tb
@@ -442,7 +447,8 @@ Partial Class Main
         Me.Number_tb.Name = "Number_tb"
         Me.Number_tb.ReadOnly = True
         Me.Number_tb.Size = New System.Drawing.Size(86, 26)
-        Me.Number_tb.TabIndex = 14
+        Me.Number_tb.TabIndex = 105
+        Me.Number_tb.TabStop = False
         Me.Number_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Count_of_F_lb
@@ -517,7 +523,7 @@ Partial Class Main
         Me.Show_bt.Location = New System.Drawing.Point(348, 27)
         Me.Show_bt.Name = "Show_bt"
         Me.Show_bt.Size = New System.Drawing.Size(239, 40)
-        Me.Show_bt.TabIndex = 0
+        Me.Show_bt.TabIndex = 11
         Me.Show_bt.Text = "Show Statistics"
         Me.Show_bt.UseVisualStyleBackColor = True
         '

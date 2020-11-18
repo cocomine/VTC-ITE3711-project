@@ -1,8 +1,8 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class Main
-    Const TEST_PERCENTAGE As Double = 0.5, PROJECT_PERCENTAGE As Double = 0.3, QUIZZES_PERCENTAGE As Double = 0.2, CA_PERCENTAGE As Double = 0.4, EXAM_PERCENTAGE As Double = 0.6
-    Dim STU_DATAS As New List(Of Dictionary(Of String, String))
+    Public Const TEST_PERCENTAGE As Double = 0.5, PROJECT_PERCENTAGE As Double = 0.3, QUIZZES_PERCENTAGE As Double = 0.2, CA_PERCENTAGE As Double = 0.4, EXAM_PERCENTAGE As Double = 0.6
+    Public STU_DATAS As New List(Of Dictionary(Of String, String))
 
     '初始化
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -73,17 +73,26 @@ Public Class Main
 
     End Sub
 
+    'Edit record
+    Private Sub Record_lib_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Record_lib.DoubleClick
+        Dim stu As Dictionary(Of String, String) = STU_DATAS(Record_lib.SelectedIndex)
+        Dim Edit_Form As Edit_Form = New Edit_Form
+        Edit_Form.STU = stu
+        Edit_Form.SelectedIndex = Record_lib.SelectedIndex
+        Edit_Form.Show()
+    End Sub
+
     '清除所有'
     Private Sub Clear_bt_Click(sender As Object, e As EventArgs) Handles Clear_bt.Click
         Dim AllTextBoxControl = Get_All_Control(Me, GetType(TextBox))
         For Each textbox As TextBox In AllTextBoxControl.Values
             textbox.Clear()
-            STU_DATAS.Clear()
         Next
         If Record_lib.Items.Count > 0 Then
             Dim YesNo = MsgBox("Also have some data in Student Record list. Do you want clear too?", 4 + 32 + 256, "Clear too?")
             If YesNo = 6 Then
                 Record_lib.Items.Clear()
+                STU_DATAS.Clear()
             End If
         End If
     End Sub
@@ -167,7 +176,7 @@ Public Class Main
                 Grade = "A"
             End If
         Else
-                Grade = "F"
+            Grade = "F"
         End If
         Module_Grade_tb.Text = Grade
 
@@ -205,5 +214,16 @@ Public Class Main
     Private Sub Test_tb_TextChanged(sender As Object, e As EventArgs) Handles Test_tb.TextChanged, Exam_tb.TextChanged, Quizzes_tb.TextChanged, Project_tb.TextChanged, Name_tb.TextChanged
         sender = CType(sender, TextBox)
         sender.BackColor = Color.White
+    End Sub
+
+    'Enter key down
+    Private Sub Key(sender As Object, e As KeyEventArgs) Handles Exam_tb.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Confirm_bt_Click(sender, e)
+        End If
+    End Sub
+
+    Public Sub Change_stu_record(stu As Dictionary(Of String, String), SelectedIndex As Integer)
+        STU_DATAS(SelectedIndex) = stu
     End Sub
 End Class
