@@ -68,6 +68,8 @@ Public Class Main
         Else
             Number_tb.Text = "N/A"
             Module_Average_tb.Text = "N/A"
+            Count_of_A_tb.Text = 0
+            Count_of_F_tb.Text = 0
         End If
 
 
@@ -216,10 +218,17 @@ Public Class Main
         sender.BackColor = Color.White
     End Sub
 
-    'Enter key down
-    Private Sub Key(sender As Object, e As KeyEventArgs) Handles Exam_tb.KeyDown
-        If e.KeyCode = Keys.Enter Then
+    Private Sub Key(sender As Object, e As KeyEventArgs) Handles Exam_tb.KeyDown, Record_lib.KeyDown
+        If e.KeyCode = Keys.Enter And sender.GetType Is GetType(TextBox) Then
+            'Enter key down
             Confirm_bt_Click(sender, e)
+        ElseIf e.KeyCode = Keys.Delete And sender.GetType Is GetType(ListBox) Then
+            'Del key down
+            Dim YesNo = MsgBox("Are you sure want to delete?", 4 + 48 + 256, "Delete?")
+            If YesNo = 6 Then
+                STU_DATAS.RemoveAt(Record_lib.SelectedIndex)
+                Record_lib.Items.RemoveAt(Record_lib.SelectedIndex)
+            End If
         End If
     End Sub
 

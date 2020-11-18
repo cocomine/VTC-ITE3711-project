@@ -7,8 +7,11 @@ Public Class Edit_Form
 
     'save change
     Private Sub Save_bt_Click(sender As Object, e As EventArgs) Handles Save_bt.Click
-        Main.Change_stu_record(STU, SelectedIndex)
-        Me.Close()
+        Dim YesNO = MsgBox("Are you sure save change?", 4 + 32 + 256, "Save change?")
+        If YesNO = 6 Then
+            Main.Change_stu_record(STU, SelectedIndex)
+            Me.Close()
+        End If
     End Sub
 
     '初始化
@@ -106,6 +109,7 @@ Public Class Edit_Form
                     Dim OkNo = MsgBox("Check to have the same name. Are you sure you want to continue typing?", 1 + 32, "Are you sure?")
                     If OkNo = 1 Then
                         STU = InputBoxs
+                        Save_bt.Enabled = True
                         Return
                     Else
                         Return
@@ -115,6 +119,7 @@ Public Class Edit_Form
             End If
         Next
         STU = InputBoxs
+        Save_bt.Enabled = True
     End Sub
 
     '取得所有控制元件
