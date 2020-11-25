@@ -75,13 +75,11 @@ Public Class Main
 
     End Sub
 
-    'Edit record
+    '開啟修改介面
     Private Sub Record_lib_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Record_lib.DoubleClick
         If Record_lib.SelectedIndex >= 0 Then
             Dim stu As Dictionary(Of String, String) = STU_DATAS(Record_lib.SelectedIndex)
-            Dim Edit_Form As Edit_Form = New Edit_Form
-            Edit_Form.STU = stu
-            Edit_Form.SelectedIndex = Record_lib.SelectedIndex
+            Dim Edit_Form As Edit_Form = New Edit_Form(stu, Record_lib.SelectedIndex)
             Edit_Form.Show()
         End If
     End Sub
@@ -98,6 +96,18 @@ Public Class Main
                 Record_lib.Items.Clear()
                 STU_DATAS.Clear()
             End If
+        End If
+    End Sub
+
+    '匯出Excel
+    Private Sub Excel_bt_Click(sender As Object, e As EventArgs) Handles Excel_bt.Click
+        If STU_DATAS.Count > 0 Then
+            Dim var = New To_Excal(STU_DATAS)
+            If Not var.Save() Then
+                MsgBox("Could not save file. Please check if the file is open.", 16, "Could not save file.")
+            End If
+        Else
+            MsgBox("No data can be exported.", 48, "No data to exported.")
         End If
     End Sub
 
@@ -179,7 +189,7 @@ Public Class Main
         sender.BackColor = Color.White
     End Sub
 
-    '
+    'Enter Key & Del key 偵測
     Private Sub Key(sender As Object, e As KeyEventArgs) Handles Exam_tb.KeyDown, Record_lib.KeyDown
         If e.KeyCode = Keys.Enter And sender.GetType Is GetType(TextBox) Then
             'Enter key down
@@ -194,7 +204,7 @@ Public Class Main
         End If
     End Sub
 
-    '
+    '修改資料
     Public Sub Change_stu_record(stu As Dictionary(Of String, String), SelectedIndex As Integer)
         STU_DATAS(SelectedIndex) = stu
     End Sub

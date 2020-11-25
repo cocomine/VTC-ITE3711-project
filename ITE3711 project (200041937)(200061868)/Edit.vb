@@ -1,8 +1,18 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class Edit_Form
-    Public STU As Dictionary(Of String, String)
-    Public SelectedIndex As Integer
+    Private STU As Dictionary(Of String, String)
+    Private SelectedIndex As Integer
+
+    Public Sub New(stu As Dictionary(Of String, String), index As Integer)
+
+        ' 設計工具需要此呼叫。
+        InitializeComponent()
+
+        ' 在 InitializeComponent() 呼叫之後加入所有初始設定。
+        Me.STU = stu
+        Me.SelectedIndex = index
+    End Sub
 
     'save change
     Private Sub Save_bt_Click(sender As Object, e As EventArgs) Handles Save_bt.Click

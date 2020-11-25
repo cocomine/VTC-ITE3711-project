@@ -20,16 +20,17 @@ Public Class Func
         Return ControlList
     End Function
 
-    '
+    '計算CA_Marks
     Public Shared Function Calculation_CA_Marks(Test As Double, Project As Double, Quizzes As Double) As Double
         Return Test * TEST_PERCENTAGE + Project * PROJECT_PERCENTAGE + Quizzes * QUIZZES_PERCENTAGE
     End Function
 
-    '
+    '計算Module_Marks
     Public Shared Function Calculation_Module_Marks(CA_Marks As Double, Exam As Double) As Double
         Return CA_Marks * CA_PERCENTAGE + Exam * EXAM_PERCENTAGE
     End Function
 
+    '取得Grade
     Public Shared Function Get_Grade(CA_Marks As Double, Exam As Double, Module_Marks As Double) As String
         Dim Grade As String
         If CA_Marks >= 40 Or Exam >= 40 Then
@@ -46,6 +47,7 @@ Public Class Func
         Return Grade
     End Function
 
+    '取得Remark
     Public Shared Function Get_Remark(Module_Marks As Double, Grade As String) As String
         Dim Remark As String
         If Grade = "F" Then
@@ -60,16 +62,19 @@ Public Class Func
         Return Remark
     End Function
 
+    '檢查Name
     Public Shared Function Check_Name(var As String) As Boolean
         Dim CheckNameRegex As Regex = New Regex("^[a-zA-z\s]*$")
         Return CheckNameRegex.IsMatch(var)
     End Function
 
+    '檢查整數
     Public Shared Function Check_Int(var As String) As Boolean
         Dim CheckIntRegex As Regex = New Regex("^[0-9]+(.[0-9]{1,})?$")
         Return CheckIntRegex.IsMatch(var)
     End Function
 
+    '檢查範圍
     Public Shared Function Check_Range(var As Double) As Boolean
         Return var < 0 Or var > 100
     End Function

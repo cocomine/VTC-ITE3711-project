@@ -65,6 +65,7 @@ Partial Class Main
         Me.Module_Average_lb = New System.Windows.Forms.Label()
         Me.Mumber_lb = New System.Windows.Forms.Label()
         Me.Show_bt = New System.Windows.Forms.Button()
+        Me.Excel_bt = New System.Windows.Forms.Button()
         Me.Input_gp.SuspendLayout()
         Me.Result_gb.SuspendLayout()
         Me.lnput_CA_gb.SuspendLayout()
@@ -368,6 +369,7 @@ Partial Class Main
         'Student_gb
         '
         Me.Student_gb.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Student_gb.Controls.Add(Me.Excel_bt)
         Me.Student_gb.Controls.Add(Me.Label2)
         Me.Student_gb.Controls.Add(Me.Label1)
         Me.Student_gb.Controls.Add(Me.Find_bt)
@@ -386,7 +388,7 @@ Partial Class Main
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(21, 806)
+        Me.Label2.Location = New System.Drawing.Point(21, 770)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(361, 29)
@@ -396,7 +398,7 @@ Partial Class Main
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(21, 760)
+        Me.Label1.Location = New System.Drawing.Point(21, 728)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(353, 29)
@@ -586,6 +588,15 @@ Partial Class Main
         Me.Show_bt.Text = "Show Statistics"
         Me.Show_bt.UseVisualStyleBackColor = True
         '
+        'Excel_bt
+        '
+        Me.Excel_bt.Location = New System.Drawing.Point(237, 811)
+        Me.Excel_bt.Name = "Excel_bt"
+        Me.Excel_bt.Size = New System.Drawing.Size(238, 45)
+        Me.Excel_bt.TabIndex = 14
+        Me.Excel_bt.Text = "Export to Excel"
+        Me.Excel_bt.UseVisualStyleBackColor = True
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -655,4 +666,5 @@ Partial Class Main
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Excel_bt As Button
 End Class
