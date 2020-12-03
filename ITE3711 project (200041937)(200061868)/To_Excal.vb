@@ -34,10 +34,6 @@ Public Class To_Excal
             DataArray(i, 8) = Remark
         Next
 
-        'Module Statistics
-        'Dim StatisticsArray(0 To 4, 0 To 2) As Object
-        'StatisticsArray(0) = {"", ""}
-
         oSheet = oBook.Worksheets(1)
         With oSheet
             .Name = "Student Record" '資料表名
