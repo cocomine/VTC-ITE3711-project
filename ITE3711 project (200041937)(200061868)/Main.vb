@@ -207,5 +207,6 @@ Public Class Main
     '修改資料
     Public Sub Change_stu_record(stu As Dictionary(Of String, String), SelectedIndex As Integer)
         STU_DATAS(SelectedIndex) = stu
+        Record_lib.Items(SelectedIndex) = stu("Name")
     End Sub
 End Class
